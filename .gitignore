@@ -3,3 +3,5 @@ __pycache__
 target
 .idea
 pipeline-manager-web
+
+src/main/public/out
