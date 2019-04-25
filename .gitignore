@@ -3,5 +3,6 @@ __pycache__
 target
 .idea
 pipeline-manager-web
+.pytest_cache
 
 src/main/public/out

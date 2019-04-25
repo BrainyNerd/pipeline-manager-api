@@ -5,9 +5,7 @@ set -e
 conda env create -f dev_environment.yml || echo "env pipeline-manager-dev already present"
 source activate pipeline-manager-dev
 pip install -r requirements.txt
+pip install -r src/tests/requirements.txt
+py.test -svv --junitxml=tests/output/junit.xml --cov=app  --cov-report html
 
-cd pipeline-manager-web
-npm i
-npm run build
-cd ..
-python src/main/pipeline_manager/server.py
+source deactivate
