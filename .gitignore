@@ -4,5 +4,12 @@ target
 .idea
 pipeline-manager-web
 .pytest_cache
+.DS_Store
+*.pyc
+.cache/
+tests/output/
+.coverage
+htmlcov
+.coveragerc
 
 src/main/public/out

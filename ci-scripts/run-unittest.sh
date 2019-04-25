@@ -6,6 +6,6 @@ conda env create -f dev_environment.yml || echo "env pipeline-manager-dev alread
 source activate pipeline-manager-dev
 pip install -r requirements.txt
 pip install -r src/tests/requirements.txt
-py.test -svv --junitxml=tests/output/junit.xml --cov=app  --cov-report html
+py.test -svv --junitxml=tests/output/junit.xml --cov=tests --cov-report html
 
 source deactivate
