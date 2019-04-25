@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 set -e
-#Assuming conda path is exported
+export PATH="${PATH}:/root/miniconda3/bin"
 conda env create -f dev_environment.yml || echo "env pipeline-manager-dev already present"
 source activate pipeline-manager-dev
 pip install -r requirements.txt
