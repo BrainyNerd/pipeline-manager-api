@@ -2,7 +2,6 @@
 __pycache__
 target
 .idea
-pipeline-manager-web
 .pytest_cache
 .DS_Store
 *.pyc
@@ -11,5 +10,5 @@ tests/output/
 .coverage
 htmlcov
 .coveragerc
-
+*node_modules
 src/main/public/out

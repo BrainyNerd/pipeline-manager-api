@@ -12,7 +12,7 @@ summary = "Pipeline Manger for ARTIP"
 description = """Pipeline Manager is a tool to configure and trigger the pipelines on any given source"""
 
 authors = [Author("ARTIP Team", "artip@googlegroups.com")]
-url = "https://bitbucket.org/iucaa/pipeline-manager-api/"
+url = "https://bitbucket.org/iucaa/pipeline-manager/"
 license = "GPL License"
 default_task = ["clean"]
 

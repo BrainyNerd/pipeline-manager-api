@@ -1,0 +1,42 @@
+import React from "react";
+import { Button, Grid, Row, Col } from "react-bootstrap";
+import axios from "axios";
+
+export default class Hello extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {greeting: 'Hello ' + this.props.name};
+        this.getPythonHello = this.getPythonHello.bind(this);
+        this.personaliseGreeting=this.personaliseGreeting.bind(this)
+    }
+
+    personaliseGreeting({data}) {
+        this.setState({greeting: data + ' ' + this.props.name + '!'});
+    }
+
+    getPythonHello() {
+        axios.get(window.location.href + 'hello')
+        .then(this.personaliseGreeting)
+        .catch(error => console.log(error));
+    }
+
+    render () {
+        return (
+            <Grid>
+                <Row>
+                <Col md={7} mdOffset={5}>
+                    <h1 className={this.props.className}>{this.state.greeting}</h1>
+                    <hr/>
+                </Col>
+                </Row>
+                <Row>
+                <Col md={7} mdOffset={5}>
+                    <Button bsSize="large" bsStyle="danger" onClick={this.getPythonHello}>
+                    Say Hello!
+                    </Button>
+                </Col>
+                </Row>
+            </Grid>
+        );
+    }
+}
